@@ -1,12 +1,17 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.9;
 
-import { Auction } from './Auction.sol';
+import "./Auction.sol";
 
 contract FactoryAuction {
     address[] public auctions;
+    address public owner;
 
     event AuctionCreated(address auctionContract, address owner, uint numActions, address[] allAuctions);
+
+    constructor() {
+        owner = msg.sender;
+    }
 
     function createAuction(uint startBlock, uint endBlock, string memory ipfsHash, uint maxPrice) 
     public

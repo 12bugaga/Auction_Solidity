@@ -25,9 +25,9 @@ contract Auction {
 
     constructor(address owner, uint startBlock, uint endBlock, string memory ipfsHash, uint maxPrice) payable {
         require(startBlock <= endBlock, "StartBlock <= EndBlock!");
-        require(startBlock > block.number, "Auction can't start in the past! Check StartBlock!");
+        require(startBlock > block.number, "Auction can not start in the past! Check StartBlock!");
         require(owner != address(0), "Check owner address!");
-        require(maxPrice > 0, "You can't create auction with maxProca equal 0!");
+        require(maxPrice > 0, "You can not create auction with maxProca equal 0!");
         
         _owner = owner;
         _startBlock = startBlock;
@@ -170,7 +170,7 @@ contract Auction {
     }
 
     modifier onlyNotOwner{
-        require(msg.sender != _owner, "Owner can't bid!");
+        require(msg.sender != _owner, "Owner can not bid!");
         _;
     }
 

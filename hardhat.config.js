@@ -13,7 +13,7 @@ module.exports = {
   },
   networks: {
     rinkeby: {
-      url: "",
+      url: process.env.MAINNET_INFURA,
       accounts: [process.env.PRIVATE_KEY],
     },
     polygon: {

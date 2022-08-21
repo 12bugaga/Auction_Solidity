@@ -4,7 +4,7 @@ async function main() {
     console.log("Deploying contracts with the account:", deployer.address);
   
     const Factory = await ethers.getContractFactory("FactoryAuction");
-    const factory = await Factory.deploy(({ gasLimit: 30000000, gasPrice: 200000000}));
+    const factory = await Factory.deploy(); //({ gasLimit: 3000000, gasPrice: 200000000000})
   
     console.log("Factory address: ", factory.address);
   }
