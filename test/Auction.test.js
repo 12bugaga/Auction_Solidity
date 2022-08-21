@@ -241,7 +241,7 @@ describe("Auction", () => {
             const receipt2 = await tx2.wait()
             const gasSpent2 = receipt2.gasUsed.mul(receipt2.effectiveGasPrice)
 
-            expect(parseInt(await user1.getBalance())).to.eq(startBalance - (parseInt(gasSpent1) + parseInt(gasSpent2)));
+            expect(parseInt(await user1.getBalance())).to.eq(startBalance - parseInt(gasSpent1) - parseInt(gasSpent2));
         });
 
         it("try second times withdraw your bid", async () => {

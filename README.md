@@ -1,13 +1,7 @@
-# Sample Hardhat Project
+Auction on solidity:
+    1 The seller can auction some asset for a set price in native tokens (ETH/TRON/MATIC/etc.)
+    2 Remove the asset from the auction, accept the offer for the price.
+    3 The buyer can: buy the asset for a set price, or make his own bid.
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
-
-Try running some of the following tasks:
-
-```shell
-npx hardhat help
-npx hardhat test
-GAS_REPORT=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
-```
+Factory address - 
+First auction address - 
